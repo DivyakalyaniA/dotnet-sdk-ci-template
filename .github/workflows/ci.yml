@@ -160,7 +160,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --severity-threshold=high
+         args: --file=${{ env.PROJECT_PATH }} --severity-threshold=high
 
   # ---------------------------------------------------------------------------
   # JOB 4: CODE QUALITY (SonarCloud)
